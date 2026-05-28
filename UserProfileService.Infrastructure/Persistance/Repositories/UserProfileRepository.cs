@@ -1,10 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using UserProfileService.Domain.Entities;
+using UserProfileService.Domain.Repositories;
 using UserProfileService.Domain.ValueObjects;
 
 namespace UserProfileService.Infrastructure.Persistance.Repositories;
 
-public class UserProfileRepository
+public class UserProfileRepository : IUserProfileRepository
 {
     private readonly UserProfileDbContext _context;
 
