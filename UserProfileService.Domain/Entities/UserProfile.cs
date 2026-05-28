@@ -10,7 +10,7 @@ public class UserProfile
     public string FirstName { get; private set; }
     public string LastName { get; private set; }
     public string? PhoneNumber { get; private set; }
-    public string? Email { get; private set; }
+    public string? Description { get; private set; }
     public string? PhotoUrl { get; private set; }
     public DateTime CreatedAt { get; private set; }
     public DateTime UpdatedAt { get; private set; }
@@ -18,7 +18,7 @@ public class UserProfile
     private UserProfile() { }
 
 
-    public static UserProfile Create (OwnerId ownerId, string firstName, string lastName, string? phoneNumber = null, string? email = null, string? photoUrl = null)
+    public static UserProfile Create (OwnerId ownerId, string firstName, string lastName, string? phoneNumber = null, string? description = null, string? photoUrl = null)
     {
         return new UserProfile
         {
@@ -27,19 +27,19 @@ public class UserProfile
             FirstName = firstName,
             LastName = lastName,
             PhoneNumber = phoneNumber,
-            Email = email,
+            Description = description,
             PhotoUrl = photoUrl,
             CreatedAt = DateTime.UtcNow,
             UpdatedAt = DateTime.UtcNow
         };
     }
 
-    public void Update(string firstName, string lastName, string? phoneNumber = null, string? email = null, string? photoUrl = null)
+    public void Update(string firstName, string lastName, string? phoneNumber = null, string? description = null, string? photoUrl = null)
     {
         FirstName = firstName;
         LastName = lastName;
         PhoneNumber = phoneNumber;
-        Email = email;
+        Description = description;
         PhotoUrl = photoUrl;
         UpdatedAt = DateTime.UtcNow;
     }
