@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\UserProfileService.Application\UserProfileService.Application.csproj" />
+    <ProjectReference Include="..\UserProfileService.Domain\UserProfileService.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
